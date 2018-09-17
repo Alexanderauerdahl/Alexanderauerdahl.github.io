@@ -1,0 +1,15 @@
+main>p{
+  background-color: blue;
+  text.align: center;
+  padding: 30px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 3px;
+}

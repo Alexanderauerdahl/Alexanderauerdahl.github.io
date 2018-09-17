@@ -1,0 +1,16 @@
+body{
+  background-color: black;
+}
+body{
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+img{
+  width: 320px;
+  border-width:5px;
+  border-style: solid;
+  border-color: darkorange;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
