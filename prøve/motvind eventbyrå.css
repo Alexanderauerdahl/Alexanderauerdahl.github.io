@@ -1,0 +1,12 @@
+body{
+background-color: lightblue;
+padding-left: 200px
+}
+h1{
+  font-family: cursive;
+  font-size: 24;
+}
+img{
+  width: 400px;
+  height: 300px;
+}
