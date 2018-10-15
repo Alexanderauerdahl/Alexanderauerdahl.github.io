@@ -1,0 +1,12 @@
+body{
+  margin-bottom: 20px;
+  background-color: grey;
+  padding-left: 20px;
+}
+.spørsmål{
+color: lightblue;
+}
+.prøvselv{
+color: orange;
+text-align: center;
+}
