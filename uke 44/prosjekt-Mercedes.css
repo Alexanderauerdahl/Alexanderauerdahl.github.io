@@ -1,0 +1,41 @@
+body{
+  display: grid;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 900px;
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #000000;
+}
+}
+.gridheader{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px,auto);
+}
+.gridmain{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: minmax(100px, auto);
+background-color: #FFFAFA;
+}
+
+}
+.gridfooter{
+display: grid;
+background-color: #000000;
+}
+
+.Gwagon{
+margin-top: 30px;
+margin-left: 15px;
+grid-column: span 1;
+grid-row: span 1;
+}
+.C63{
+margin-top: 30px;
+grid-column: span 1;
+grid-row: span 1;
+margin-right:15px;
+}

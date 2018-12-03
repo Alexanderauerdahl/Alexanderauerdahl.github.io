@@ -1,0 +1,67 @@
+body{
+  display: grid;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 900px;
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #000000;
+}
+}
+.GridHeader{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px,auto);
+}
+.GridMain{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: minmax(100px, auto);
+background-color: #FFFAFA;
+}
+
+}
+.GridFooter{
+display: grid;
+background-color: #000000;
+}
+.logo{
+
+}
+.Bmw{
+margin-top: 30px;
+margin-left: 25px;
+grid-column: span 1;
+grid-row: span 1;
+}
+.Mercedes{
+margin-top: 30px;
+grid-column: span 1;
+grid-row: span 1;
+margin-right:25px;
+}
+.Bugatti{
+  grid-column: span 1;
+  grid-row: span 1;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+.ferrari{
+  margin-right: 25px;
+  grid-column: span 1;
+  grid-column: span 1;
+  margin-top: 15px;
+}
+.Dodge{
+  grid-column: span 1;
+  grid-row: span 1;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.RangeRover{
+  margin-right: 25px;
+  grid-column: span 1;
+  grid-row: span 1;
+  margin top: 15px;
+}
