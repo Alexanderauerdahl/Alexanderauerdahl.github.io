@@ -19,12 +19,11 @@ body{
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-auto-rows: minmax(100px, auto);
-background-color: #FFFAFA;
+background-color: white;
 }
-
 .gridfooter{
 display: grid;
-background-color: white;
+background-color: #000000;
 color: white;
 margin-top: 30px;
 }
@@ -88,8 +87,7 @@ li.dropdown {
   display: block;
 }
 
-
-.BMWM2{
+.ferrari488{
 margin-top: 30px;
 margin-left: 30px;
 grid-column: span 1;
@@ -97,7 +95,7 @@ grid-row: span 1;
 margin-right: 10px;
 }
 
-.BMWX5{
+.f12tdf{
 margin-top: 30px;
 grid-column: span 1;
 grid-row: span 1;
@@ -105,6 +103,6 @@ margin-right:30px;
 margin-left: 10px;
 }
 
-.BMWbilder{
-border: black 10px solid;
+.Ferraribilder{
+  border: black 10px solid;
 }
