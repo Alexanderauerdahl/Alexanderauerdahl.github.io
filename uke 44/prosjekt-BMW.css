@@ -24,7 +24,7 @@ background-color: #FFFAFA;
 
 .gridfooter{
 display: grid;
-background-color: white;
+background-color: #000000;
 color: white;
 margin-top: 30px;
 }
