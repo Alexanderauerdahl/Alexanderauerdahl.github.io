@@ -1,0 +1,91 @@
+body{
+  display: grid;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 900px;
+  margin:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #000000;
+ }
+
+.gridheader{
+  display: grid;
+  grid-auto-rows: minmax(100px,auto);
+ }
+
+.gridmain{
+ display: grid;
+ grid-auto-rows: minmax(100px, auto);
+ background-color: white;
+ }
+
+.gridfooter{
+ display: grid;
+ background-color: #000000;
+ color: white;
+ margin-top: 30px;
+ }
+
+.logo{
+ grid-column: 1/2;
+ }
+.element{
+ grid-column: 2/3;
+ grid-row: 1/2
+ }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  }
+
+li {
+  float: right;
+  }
+
+li a, .Andrebiler {
+  display: inline-block;
+  color: White;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+
+li a:hover, .dropdown:hover .Andrebiler {
+  background-color: red;
+  color: black;
+  }
+
+li.dropdown {
+  display: inline-block;
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: red;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #8b0000;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+ }
+.omoss{
+  margin-left: 20px;
+ }
