@@ -22,85 +22,85 @@ grid-auto-rows: minmax(100px, auto);
 background-color: white;
 }
 .gridfooter{
-display: grid;
-background-color: #000000;
-color: white;
-margin-top: 30px;
+ display: grid;
+ background-color: #000000;
+ color: white;
+ margin-top: 30px;
 }
 
 .logo{
-  grid-column: 1/2;
+ grid-column: 1/2;
 }
 .element{
-  grid-column: 2/3;
+ grid-column: 2/3;
 }
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
-}
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: black;
+ }
 
 li {
-  float: right;
-}
+ float: right;
+ }
 
 li a, .Andrebiler {
-  display: inline-block;
-  color: White;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+ display: inline-block;
+ color: White;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ }
 
 li a:hover, .dropdown:hover .Andrebiler {
-  background-color: red;
-  color: black;
-}
+ background-color: red;
+ color: black;
+ }
 
 li.dropdown {
-  display: inline-block;
-}
+ display: inline-block;
+ }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: red;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  color: black;
+ display: none;
+ position: absolute;
+ background-color: red;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+ color: black;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left;
 }
 
 .dropdown-content a:hover {background-color: #8b0000;}
 
 .dropdown:hover .dropdown-content {
-  display: block;
+ display: block;
 }
 
 .ferrari488{
-margin-top: 30px;
-margin-left: 30px;
-grid-column: span 1;
-grid-row: span 1;
-margin-right: 10px;
+ margin-top: 30px;
+ margin-left: 30px;
+ grid-column: span 1;
+ grid-row: span 1;
+ margin-right: 10px;
 }
 
 .f12tdf{
-margin-top: 30px;
-grid-column: span 1;
-grid-row: span 1;
-margin-right:30px;
-margin-left: 10px;
+ margin-top: 30px;
+ grid-column: span 1;
+ grid-row: span 1;
+ margin-right:30px;
+ margin-left: 10px;
 }
 
 .Ferraribilder{
