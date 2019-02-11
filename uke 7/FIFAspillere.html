@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FIFA Spillere</title>
+    <link rel="stylesheet" href="FIFAspillere.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+
+  var config = {
+    apiKey: "AIzaSyDDpgDN8sOnJMuZkBsWDznrfKy11nEvzXU",
+    authDomain: "uke-7-aaf19.firebaseapp.com",
+    databaseURL: "https://uke-7-aaf19.firebaseio.com",
+    projectId: "uke-7-aaf19",
+    storageBucket: "uke-7-aaf19.appspot.com",
+    messagingSenderId: "367087750969"
+  };
+  firebase.initializeApp(config);
+</script>
+    <link rel="stylesheet" href="spørringer.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button onclick="visallevarer">Alle Spillere</button>
+        <button onclick="bukser">Rating</button>
+        <button onclick="Skjorter">Alder</button>
+        <button onclick="Handlekurv">Pris</button>
+      </nav>
+    </header>
+    <main>
+
+    </main>
+    <script>
+      const main = document.querySelector("main");
+      const db = firebase.database();
+      const sko = db.ref("Spiller/rating");
+      const jakker = db.ref("Spiller/Alder");
+
+    function visSpiller(snapshot){
+      let Spiller = snapshot.val();
+      main.innerHTML +=
+      <article class="Spillere">
+        <h1>${Spiller.Navn}</h1> - ${Spiller.alder}</h1>
+        <p>pris: ${Spiller.pris}</p>
+        </article>
+    }
+    Rating.on("child_added",visSpiller);
+
+           Alder.on("child_added",visSpiller);
+
+
+
+           Spiller
+               .orderByChild("rating")
+               .on("child_added",visSpiller);
+
+
+           Spiller
+               .orderByChild("rating")
+               .limitToFirst(3)
+               .on("child_added",visSpiller);
+
+
+           Spiller
+               .orderByChild("rating")
+               .startAt(75)
+               .endAt(94)
+               .on("child_added",visSpiller);
+
+    </script>
+
+  </body>
+</html>
