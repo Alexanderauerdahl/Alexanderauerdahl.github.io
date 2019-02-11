@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="Nettside.css">
+    <link rel="stylesheet" href="Nettbutikk.css">
   </head>
   <body>
     <header>
       <nav>
         <button onclick="visallevarer">Alle varer</button>
-        <button onclick="bukser">Buker</button>
+        <button onclick="bukser">Bukser</button>
         <button onclick="Skjorter">Skjorter</button>
         <button onclick="Handlekurv">Handlekurv</button>
       </nav>
@@ -29,7 +29,7 @@
   firebase.initializeApp(config);
 </script>
 <script>
-var database = firebase.datbase(;)
+var database = firebase.database();
 var bruker = database.ref("varer/bukser");
 var bruker = database.ref("varer/skjorter");
 let main = document.querySelector("main");
@@ -41,26 +41,20 @@ let main = document.querySelector("main");
                        <h1>${vare.merke} ${vare.modell}</h1>
                        <p>${vare.pris}</p>
                    </article>
-               `;
-           }
-           sokefelt.oninput = sok;
-           function sok () {
-               søketekst=sokefelt.value;
-               visBukser();
-           }
+         ` }
            function visAlleVarer() {
                bukser.on("child_added", visVare);
                skjorter.on("child_added", visVare);
            }
            visAlleVarer();
            function visAlleVarer() {
-               main.innerHTML = " "; //Fjerner alt innhold i main
+               main.innerHTML = "";// Fjerner alt innhold i main;
                bukser.on("child_added", visVare);
                skjorter.on("child_added", visVare);
            }
            function visBukser() {
-               main.innerHTML = " ";
-               //bukser.on("child_added", visVare);
+               main.innerHTML = "";
+               bukser.on("child_added", visVare);
                bukser
                    .orderByChild("merke")
                    .startAt(søketekst)
@@ -68,7 +62,7 @@ let main = document.querySelector("main");
                    .on("child_added", visVare);
            }
            function visSkjorter() {
-               main.innerHTML = " ";
+               main.innerHTML = "";
                skjorter.on("child_added", visVare);
            }
     </script>
