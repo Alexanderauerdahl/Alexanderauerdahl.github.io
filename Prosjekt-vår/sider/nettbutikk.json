@@ -1,0 +1,325 @@
+{
+
+  "Biler": {
+
+      "100": {
+
+       "Type": "Sprt",
+
+       "Merke": "BMW",
+
+       "lansert": "2019",
+
+       "modell": "850M",
+
+       "pris": 2000.000,
+
+       "KM": 5000,
+
+       "HK": 530,
+
+       "ImageURL": ""
+
+     },
+
+     "101": {
+
+      "Type": "SUV",
+
+      "Merke": "BMW",
+
+      "lansert": "2019",
+
+      "modell": "X740i",
+
+      "pris": 1670.000,
+
+      "KM": 3000,
+
+      "HK": 340,
+
+      "ImageURL": ""
+
+     },
+
+     "102": {
+
+      "Type": "Diverse",
+
+      "Merke": "Audi",
+
+      "lansert": "2016",
+
+      "modell": "RS6",
+
+      "pris": 1250.000,
+
+      "KM": 36000,
+
+      "HK": 560,
+
+      "ImageURL": ""
+
+     },
+
+     "103": {
+
+      "Type": "Eksklusiv",
+
+      "Merke": "Bently",
+
+      "lansert": "2016",
+
+      "modell": "Continental",
+
+      "pris": 1950.000,
+
+      "KM": 40.000,
+
+      "HK": 528,
+
+      "ImageURL": ""
+
+     },
+
+     "104": {
+
+      "Type": "SUV",
+
+      "Merke": "Lamborghini",
+
+      "lansert": "2018",
+
+      "modell": "Urus",
+
+      "pris": 3500.000,
+
+      "KM": 50,
+
+      "HK": 650,
+
+      "ImageURL": ""
+
+     },
+
+     "105": {
+
+      "Type": "Diverse",
+
+      "Merke": "Alfa Romeo",
+
+      "lansert": "2018",
+
+      "modell": "Giulia Q4",
+
+      "pris": 990.000,
+
+      "KM": 10.000,
+
+      "HK": 510,
+
+      "ImageURL": ""
+
+     },
+
+     "106": {
+
+      "Type":"Sport",
+
+      "Merke": "Ferrari",
+
+      "lansert": "2018",
+
+      "modell": "488 Pista",
+
+      "pris": 3200.000,
+
+      "KM": 5000,
+
+      "HK": 720,
+
+      "ImageURL": ""
+
+     },
+
+     "107": {
+
+      "Type": "SUV",
+
+      "Merke": "Mercedes",
+
+      "lansert": "2016",
+
+      "modell": "G63",
+
+      "pris": 1250.000,
+
+      "KM": 35000,
+
+      "HK": 571,
+
+      "ImageURL": ""
+
+     },
+
+     "108": {
+
+      "Type":"Eksklusiv",
+
+      "Merke": "Rolls Royce",
+
+      "lansert": "2017",
+
+      "modell": "Wraith",
+
+      "pris": 3890.000,
+
+      "KM": 18.500,
+
+      "HK": 624,
+
+      "ImageURL": ""
+
+     },
+
+     "109": {
+
+      "Type": "Diverse",
+
+      "Merke": "Dodge",
+
+      "lansert": "2018",
+
+      "modell": "Challenger",
+
+      "pris": 1200.000,
+
+      "KM": 29000,
+
+      "HK": 707,
+
+      "ImageURL": ""
+
+     },
+
+     "110": {
+
+      "Type": "Sport",
+
+      "Merke": "Aston Martin",
+
+      "lansert": "2018",
+
+      "modell": "DB11",
+
+      "pris": 2800.000,
+
+      "KM": 7000,
+
+      "HK": 600,
+
+      "ImageURL": ""
+
+     },
+
+     "111": {
+
+      "Type": "Eksklusiv",
+
+      "Merke": "Maybach",
+
+      "lansert": "2015",
+
+      "modell": "S600",
+
+      "pris": 3500.000,
+
+      "KM": 50.000,
+
+      "HK": 530,
+
+      "ImageURL": ""
+
+     },
+
+     "112": {
+
+      "Type": "Eksklusiv",
+
+      "Merke": "Porsche",
+
+      "lansert": "2018",
+
+      "modell": "Panamera T",
+
+      "pris": 1800.000,
+
+      "KM": 20.000,
+
+      "HK": 462,
+
+      "ImageURL": ""
+
+     },
+
+     "113": {
+
+      "Type": "Diverse",
+
+      "Merke": "Nissan",
+
+      "lansert": "2017",
+
+      "modell": "GT-R",
+
+      "pris": 1500.000,
+
+      "KM": 18.000,
+
+      "HK": 570,
+
+      "ImageURL": ""
+
+     },
+
+     "114": {
+
+      "Type": "Sport",
+
+      "Merke": "Lamborghini",
+
+      "lansert": "2019",
+
+      "modell": "Aventador SVJ",
+
+      "pris": 3500.000,
+
+      "KM": 0,
+
+      "HK": 770,
+
+      "ImageURL": ""
+
+     },
+
+     "115": {
+
+      "Type": "SUV",
+
+      "Merke": "Bentley",
+
+      "lansert": "2017",
+
+      "modell": "Bentayga",
+
+      "pris": 2500.000,
+
+      "KM": 7000,
+
+      "HK": 608,
+
+      "ImageURL": ""
+
+     },
+  }
+}

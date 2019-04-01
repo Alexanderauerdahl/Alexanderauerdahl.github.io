@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dyreklinikken</title>
+    <link rel="stylesheet" href="Dyreklinikk.css">
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+
+  var config = {
+    apiKey: "AIzaSyBI5FMB09YBQFRcUBbrACvauA5smMqPNmM",
+    authDomain: "test-uke-10.firebaseapp.com",
+    databaseURL: "https://test-uke-10.firebaseio.com",
+    projectId: "test-uke-10",
+    storageBucket: "",
+    messagingSenderId: "250264810721"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button onclick="visAlle()">Alle dyr</button>
+        <button onclick="viskatteNavn()">Navn på katter</button>
+        <button onclick="visAlder()">Eldste hundene</button>
+        <button onclick="visFarge()">Beige dyr</button>
+        <button onclick="visNavn()">Dyr Mellom M og T</button>
+
+
+        <!-- Gjør ferdig knappene og koblingene her-->
+
+      </nav>
+    </header>
+    <main>
+
+    </main>
+
+    <script>
+      const main = document.querySelector("main");
+      const db = firebase.database();
+      const hunder = db.ref("Dyr/Hunder");
+      const katter = db.ref("Dyr/Katter");
+       //Fyll inn riktig referanse
+       //Lag en referanse for katter også!
+
+      function genererHTML(snapshot){
+        let dyr = snapshot.val();
+        let key = snapshot.key;
+
+        main.innerHTML +=`
+            <article class="Dyr">
+              <h1>${dyr.Navn}</h1>
+              <img src="${dyr.Bilde}" alt="">
+              <p>Farge: ${dyr.Farge1}, ${dyr.Farge2}</p>
+              <p>Alder: ${dyr.Alder}</p>
+              <a href"dyredetaljer.html?id=${key}">les mer</a>
+            </article>
+        `
+      }
+
+      function visAlle(){
+        main.innerHTML = ``
+        hunder.on("child_added",genererHTML);
+        katter.on("child_added", genererHTML);
+      }
+
+      visAlle();
+
+      function viskatteNavn(){
+        main.innerHTML = ``
+
+         katter
+
+         .orderByChild("Navn")
+
+         .on("child_added",genererHTML);
+
+      }
+
+      function visAlder(){
+        main.innerHTML = ``
+
+        hunder
+
+         .orderByChild("Alder")
+
+         .limitToLast(3)
+
+         .on("child_added",genererHTML);
+      }
+
+        function visFarge(){
+
+        main.innerHTML = ``
+
+         katter.orderByChild("Farge1").equalTo("Beige").on("child_added",genererHTML);
+         hunder.orderByChild("Farge1").equalTo("Beige").on("child_added",genererHTML);
+         katter.orderByChild("Farge2").equalTo("Beige").on("child_added",genererHTML);
+         hunder.orderByChild("Farge2").equalTo("Beige").on("child_added",genererHTML);
+
+      }
+
+
+      function visNavn(){
+
+        main.innerHTML = ``
+
+        katter.orderByChild("Navn").startAt("M").endAt("U").on("child_added",genererHTML);
+        hunder.orderByChild("Navn").startAt("M").endAt("U").on("child_added",genererHTML);
+      }
+
+    </script>
+
+
+  </body>
+</html>

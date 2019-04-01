@@ -22,10 +22,10 @@
   <body>
     <header>
       <nav>
-        <button onclick="visallevarer">Alle Spillere</button>
-        <button onclick="bukser">Rating</button>
-        <button onclick="Skjorter">Alder</button>
-        <button onclick="Handlekurv">Pris</button>
+        <button onclick="visallespillere">Alle Spillere</button>
+        <button onclick="Rating">Rating</button>
+        <button onclick="Alder">Alder</button>
+        <button onclick="Pris">Pris</button>
       </nav>
     </header>
     <main>
@@ -34,41 +34,57 @@
     <script>
       const main = document.querySelector("main");
       const db = firebase.database();
-      const sko = db.ref("Spiller/rating");
-      const jakker = db.ref("Spiller/Alder");
+      const rating = db.ref("Spiller/rating");
+      const alder = db.ref("Spiller/Alder");
 
     function visSpiller(snapshot){
       let Spiller = snapshot.val();
       main.innerHTML +=
-      <article class="Spillere">
-        <h1>${Spiller.Navn}</h1> - ${Spiller.alder}</h1>
-        <p>pris: ${Spiller.pris}</p>
+      <article class="FIFA">
+        <h1>${Spiller.Rating}</h1> - ${Spiller.Alder}</h1>
+        <img src="${FIFAsnap.ImageURL}">
+        <p>"${FIFAsnap.rating} - ${FIFAsnap.Alder}"<p/>
         </article>
     }
     Rating.on("child_added",visSpiller);
 
-           Alder.on("child_added",visSpiller);
-
-
-
            Spiller
-               .orderByChild("rating")
+               .orderByChild("Rating")
                .on("child_added",visSpiller);
 
 
            Spiller
-               .orderByChild("rating")
-               .limitToFirst(3)
+               .orderByChild("Rating")
+               .equalTo(83)
                .on("child_added",visSpiller);
 
 
            Spiller
-               .orderByChild("rating")
+               .orderByChild("Rating")
                .startAt(75)
                .endAt(94)
                .on("child_added",visSpiller);
 
+    Alder.on("child_added",visSpiller);
+
+           Spiller
+              .orderByChild("Alder")
+              .on("child_added",visSpiller);
+
+           Spiller
+              .orderByChild("Alder")
+              .limitToFirst(3)
+              .on("child_added",visSpiller);
+
+           Spiller
+              .orderByChild("Alder")
+              .startAt(18)
+              .endAt(40)
+              .on("child_added",visSpiller);
+
+
     </script>
+
 
   </body>
 </html>

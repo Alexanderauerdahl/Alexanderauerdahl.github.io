@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Pokemon</title>
+
+    <link rel="stylesheet" href="pokemon.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+    <script>
+
+      <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+
+  var config = {
+    apiKey: "AIzaSyAoSSvdLzkJcSOWwbboH_dPCfNleUHX-LQ",
+    authDomain: "pokemon-3230c.firebaseapp.com",
+    databaseURL: "https://pokemon-3230c.firebaseio.com",
+    projectId: "pokemon-3230c",
+    storageBucket: "",
+    messagingSenderId: "583583938314"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+  </head>
+
+
+
+  <body>
+
+    <header>
+
+      <nav>   <!--vikitg -->
+
+        <button onclick="visAlle()">Alle</button>
+
+        <button onclick="visGrass()">Grass</button>
+
+        <button onclick="visPoison()">Poison</button>
+
+        <button onclick="visFire()">Fire</button>
+
+        <button onclick="visWater()">Water</button>
+
+        <button onclick="visBug()">Bug</button>
+
+        <button onclick="visElectric()">Electric</button>
+
+        <button onclick="visFighting()">Fighting</button>
+
+        <button onclick="visName()">Name A-S</button>
+
+      </nav>
+
+    </header>
+
+    <main>
+
+
+
+    </main>
+
+
+
+    <script>
+
+        const main = document.querySelector("main");
+
+        var url_string = window.location.href
+var url = new URL(url_string);
+var c = url.searchParams.get("id");
+
+        const db = firebase.database();
+
+        const pokemon = db.ref("pokemon");
+
+
+
+        function visPokemon(snapshot){
+
+
+            console.log(snapshot.val());
+
+            let pokeSnap = snapshot.val();
+            let key = snapshot.key;
+
+            main.innerHTML +=`
+
+                <article class="Pokemon">
+
+                  <h1>${pokeSnap.Name}</h1>
+
+                  <img src="${pokeSnap.ImageURL}" alt="">
+
+                  <p>${pokeSnap.Type1} - ${pokeSnap.Type2}</p>
+
+                  <a href="pokestats.html?id=${key}">detaljer</a>
+
+
+
+                </article>
+
+            `
+
+        }
+
+
+
+        function visAlle(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+          .on("child_added",visPokemon);
+
+        }
+
+        visAlle(); // vikitg
+
+        function visGrass(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Type1")
+
+            .equalTo("Grass")
+
+            .on("child_added",visPokemon);
+
+        }
+
+        function visFire(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Type1")
+
+            .equalTo("Fire")
+
+            .on("child_added",visPokemon);
+
+        }
+
+        function visWater(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Type1")
+
+            .equalTo("Water")
+
+            .on("child_added",visPokemon);
+
+        }
+
+        function visBug(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Type1")  // kan endre "type1"
+
+            .equalTo("Bug")
+
+            .on("child_added",visPokemon);
+        }
+
+        function visElectric(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Type1")
+
+            .equalTo("Electric")
+
+            .on("child_added",visPokemon);
+        }
+
+        function visFighting(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Type1")
+
+            .equalTo("Fighting")
+
+            .on("child_added",visPokemon);
+        }
+
+        function visName(){
+
+          main.innerHTML = ``
+
+          pokemon
+
+            .orderByChild("Name")
+
+            .startAt("A")
+
+            .endAt("T")
+
+            .on("child_added",visPokemon);
+
+        }
+
+    </script>
+
+
+
+  </body>
+
+</html>
