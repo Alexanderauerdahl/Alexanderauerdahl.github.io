@@ -2,23 +2,21 @@
 
   "Biler": {
 
-      "100": {
+     "100": {
 
-       "Type": "Sprt",
+      "Type": "Sport",
 
-       "Merke": "BMW",
+      "Merke": "BMW",
 
-       "lansert": "2019",
+      "lansert": "2019",
 
-       "modell": "850M",
+      "modell": "850M",
 
-       "pris": 2000.000,
+      "pris": 2,
 
-       "KM": 5000,
+      "KM": 5000,
 
-       "HK": 530,
-
-       "ImageURL": ""
+      "ImageURL": "prosjekt-vår850i.jpg"
 
      },
 
@@ -32,13 +30,11 @@
 
       "modell": "X740i",
 
-      "pris": 1670.000,
+      "pris": 1.67,
 
       "KM": 3000,
 
-      "HK": 340,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårX7.jpg"
 
      },
 
@@ -52,13 +48,11 @@
 
       "modell": "RS6",
 
-      "pris": 1250.000,
+      "pris": 1.25,
 
       "KM": 36000,
 
-      "HK": 560,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårRS6.jpg"
 
      },
 
@@ -66,19 +60,17 @@
 
       "Type": "Eksklusiv",
 
-      "Merke": "Bently",
+      "Merke": "Bentley",
 
       "lansert": "2016",
 
       "modell": "Continental",
 
-      "pris": 1950.000,
+      "pris": 1.95,
 
       "KM": 40.000,
 
-      "HK": 528,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårContinental.jpg"
 
      },
 
@@ -92,13 +84,11 @@
 
       "modell": "Urus",
 
-      "pris": 3500.000,
+      "pris": 3.5,
 
       "KM": 50,
 
-      "HK": 650,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårUrus.jpg"
 
      },
 
@@ -112,13 +102,11 @@
 
       "modell": "Giulia Q4",
 
-      "pris": 990.000,
+      "pris": 1,
 
       "KM": 10.000,
 
-      "HK": 510,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårGulia.jpg"
 
      },
 
@@ -132,13 +120,11 @@
 
       "modell": "488 Pista",
 
-      "pris": 3200.000,
+      "pris": 3.2,
 
       "KM": 5000,
 
-      "HK": 720,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vår488.jpg"
 
      },
 
@@ -152,13 +138,11 @@
 
       "modell": "G63",
 
-      "pris": 1250.000,
+      "pris": 1.25,
 
       "KM": 35000,
 
-      "HK": 571,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårG63.jpg"
 
      },
 
@@ -172,13 +156,11 @@
 
       "modell": "Wraith",
 
-      "pris": 3890.000,
+      "pris": 3.89,
 
       "KM": 18.500,
 
-      "HK": 624,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårWraith.jpg"
 
      },
 
@@ -192,13 +174,11 @@
 
       "modell": "Challenger",
 
-      "pris": 1200.000,
+      "pris": 1.2,
 
       "KM": 29000,
 
-      "HK": 707,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårChallenger.jpg"
 
      },
 
@@ -212,13 +192,11 @@
 
       "modell": "DB11",
 
-      "pris": 2800.000,
+      "pris": 2.8,
 
       "KM": 7000,
 
-      "HK": 600,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårDB11.jpg"
 
      },
 
@@ -232,13 +210,11 @@
 
       "modell": "S600",
 
-      "pris": 3500.000,
+      "pris": 3.5,
 
       "KM": 50.000,
 
-      "HK": 530,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårS600.jpg"
 
      },
 
@@ -252,13 +228,11 @@
 
       "modell": "Panamera T",
 
-      "pris": 1800.000,
+      "pris": 1.8,
 
       "KM": 20.000,
 
-      "HK": 462,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårPGT.jpg"
 
      },
 
@@ -272,13 +246,11 @@
 
       "modell": "GT-R",
 
-      "pris": 1500.000,
+      "pris": 1.5,
 
       "KM": 18.000,
 
-      "HK": 570,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårGTR.jpg"
 
      },
 
@@ -292,13 +264,11 @@
 
       "modell": "Aventador SVJ",
 
-      "pris": 3500.000,
+      "pris": 3.5,
 
       "KM": 0,
 
-      "HK": 770,
-
-      "ImageURL": ""
+      "ImageURL": "prosjekt-vårSVJ.jpg"
 
      },
 
@@ -312,14 +282,12 @@
 
       "modell": "Bentayga",
 
-      "pris": 2500.000,
+      "pris": 2.5,
 
       "KM": 7000,
 
-      "HK": 608,
+      "ImageURL": "prosjekt-vårBentayga.jpg"
 
-      "ImageURL": ""
-
-     },
+     }
   }
 }

@@ -2,18 +2,19 @@
 <html lang="no" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Nettbutikk</title>
     <link rel="stylesheet" href="nettbutikk.css">
-<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-<script>
 
-  var config = {
-    apiKey: "AIzaSyCXt1gzYruwaYyrvjta0_qI06U-aCEkKrI",
-    authDomain: "nettbutikk-prosjekt.firebaseapp.com",
-    databaseURL: "https://nettbutikk-prosjekt.firebaseio.com",
-    projectId: "nettbutikk-prosjekt",
-    storageBucket: "nettbutikk-prosjekt.appspot.com",
-    messagingSenderId: "145054998689"
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+
+    var config = {
+      apiKey: "AIzaSyCXt1gzYruwaYyrvjta0_qI06U-aCEkKrI",
+      authDomain: "nettbutikk-prosjekt.firebaseapp.com",
+      databaseURL: "https://nettbutikk-prosjekt.firebaseio.com",
+      projectId: "nettbutikk-prosjekt",
+      storageBucket: "nettbutikk-prosjekt.appspot.com",
+      messagingSenderId: "145054998689"
   };
   firebase.initializeApp(config);
 </script>
@@ -21,91 +22,87 @@
   </head>
   <body>
     <header>
-      <div class="gridheader">
-        <div class="Logo"> <div class="logo"><img src="bilder/nettsidelogo.jpg" alt=""> </a>
-        </div>
-        <div class="nav">
-           <li><a href="nettbutikk-om oss.html">Kontakt Oss</a></li>
-           <li><a href="nettbutikk-Informasjon.html">Informasjon</li>
-            <li class="dropdown">
-             <a href="javascript:void(0)" class="Biler">Biler</a>
-             <div class="dropdown-content">
-              <a href="nettbutikk-SUV.html">Suv</a>
-              <a href="nettbutikk-Sport.html">Sport</a>
-              <a href="nettbutikk-Eksklusiv.html">Eksklusiv</a>
-              <a href="nettbutikk-Diverse.html">Diverse</a>
+      <div class="Gridheader">
+       <div class="logo"><a href="nettbutikk.html"><img src="../bilder/nettsidelogoprosjekt-vår.jpg" alt="logo"></a></div>
 
-        </div>
+         <button onclick="visAlle()">Alle</button>
+         <button onclick="visSUV()">SUV</button>
+         <button onclick="visSport()">Sport</button>
+         <button onclick="visDiverse()">Diverse</button>
+         <button onclick="visEksklusiv()">Eksklusiv</button>
+         <button onclick="visKM()">0-40.000 KM</button>
+         <button onclick="visPris()">under 2M</button>
+         <button onclick="visPris2()">over 2M</button>
+       </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="main" class="main">
 
       </div>
 
+    </main>
 
-    </header>
-    <main>
+     <script>
 
-
-      </main>
-      <script>
-
-          const main = document.querySelector("main");
-
-          var url_string = window.location.href
-  var url = new URL(url_string);
-  var c = url.searchParams.get("id");
-
+          const main = document.getElementById("main");
           const db = firebase.database();
+          const Biler = db.ref("Biler");
 
-          const pokemon = db.ref("Biler");
+          function genererHTML(snapshot){
+            console.log(snapshot.val());
+            let Biler = snapshot.val();
 
-          function visBil(snapshot){
+          main.innerHTML +=`
+              <article class="Biler">
+                <h1>${Biler.Merke} </h1>
+                <img class="grid_img" src="../bilder/${Biler.ImageURL}" alt="">
+                <p>
+                <p>${Biler.Type}</p>
+                <h3>${Biler.pris} Mill.</h3>
+                <h4>${Biler.KM} Km</h4>
+                </p>
+              </article>
+          `
+      }
 
+        function visAlle(){
+          main.innerHTML = ``
+          Biler.on("child_added",genererHTML)
+        }
 
-              console.log(snapshot.val());
+      visAlle();
 
-              let bilSnap = snapshot.val();
-              let key = snapshot.key;
+      function visSUV(){
+        main.innerHTML = "";
+        Biler.orderByChild("Type").equalTo("SUV").on("child_added", genererHTML);
+      }
+      function visSport(){
+        main.innerHTML = "";
+        Biler.orderByChild("Type").equalTo("Sport").on("child_added", genererHTML);
+      }
+      function visDiverse(){
+        main.innerHTML = "";
+        Biler.orderByChild("Type").equalTo("Diverse").on("child_added", genererHTML);
+      }
+      function visEksklusiv(){
+        main.innerHTML = "";
+        Biler.orderByChild("Type").equalTo("Eksklusiv").on("child_added", genererHTML);
+      }
+      function visKM(){
+        main.innerHTML = "";
+        Biler.orderByChild("KM").startAt(0).endAt(40000).on("child_added", genererHTML);
+      }
+      function visPris(){
+        main.innerHTML = "";
+        Biler.orderByChild("pris").startAt(1).endAt(2).on("child_added", genererHTML);
+      }
+      function visPris2(){
+        main.innerHTML = "";
+        Biler.orderByChild("pris").startAt(2).endAt(4).on("child_added", genererHTML);
+      }
 
-              main.innerHTML +=`
-
-                  <article class="Biler">
-
-                    <h1>${bilSnap.Name}</h1>
-
-                    <img src="${bilSnap.ImageURL}" alt="">
-
-                    <p>${bilSnap.merke} - ${bilSnap.lansert}</p>
-
-                    <a href="bilstats.html?id=${key}">detaljer</a>
-
-                  </article>`
-                }
-
-
-                function visAlle(){
-
-                  main.innerHTML = ``
-
-                  Biler
-
-                  .on("child_added",visBiler);
-                }
-
-                visAlle();
-                  function vislansert(){
-
-                    main.innerHTML = ``
-
-                    Biler
-
-                    .orderByChild("lansert")
-
-                    .startAt(2010)
-
-                    .endAt(2019)
-
-                    .on("child_added",visBiler);
-
-                  }
 
        </script>
     <footer>
