@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="underside.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      var config = {
+      apiKey: "AIzaSyCXt1gzYruwaYyrvjta0_qI06U-aCEkKrI",
+      authDomain: "nettbutikk-prosjekt.firebaseapp.com",
+      databaseURL: "https://nettbutikk-prosjekt.firebaseio.com",
+      projectId: "nettbutikk-prosjekt",
+      storageBucket: "nettbutikk-prosjekt.appspot.com",
+      messagingSenderId: "145054998689"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <div class="logo"><a href="nettbutikk.html"><img src="../bilder/nettsidelogoprosjekt-vår.jpg" alt="logo"></a></div>
+    <main id="main">
+      <p>...</p>
+    </main>
+
+    <script>
+
+      const main = document.getElementById("main");
+
+      var url_string = window.location.href
+      var url = new URL(url_string);
+      var id = url.searchParams.get("id");
+
+      const db = firebase.database();
+      const biler = db.ref("Biler/" + id );
+
+
+      function visBilDetaljer(snapshot){
+        console.log(snapshot.val())
+        let bil = snapshot.val();
+          main.innerHTML+=`
+            <h1>${bil.Merke}</h1>
+            <p><img class="bilde" src="../bilder/${bil.ImageURL}" alt="img"></p>
+            <p> <h2>Lansert:</h2> ${bil.lansert}</p>
+            <p> <h3>Pris:</h3> ${bil.pris} Mill </p>
+            <p> <h4>KM:</h3> ${bil.KM}</p>
+
+          `
+        }
+        function TuutTuut() {
+          main.innerHTML = "";
+          biler.on("value", visBilDetaljer);
+        }
+        TuutTuut();
+
+      </script>
+  </body>
+</html>

@@ -28,6 +28,9 @@ font-size: 20px;
 .Biler {
   width: 400px;
   text-align: center;
+  border: 1px solid #FFD700;
+  margin: 2px;
+  margin-bottom:20px;
 }
 .Gridheader{
   color: black;
@@ -43,11 +46,18 @@ font-size: 20px;
   grid-row: 1/2;
   padding-left: 20px;
   padding-right: 100px;
+  border: black 2px solid;
 }
 .Gridheader button{
-  border: none;
+  border: #FFD700 1px solid;
   color: #FFD700;
   background-color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.gridfooter{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .grid_img {
   max-width: 300px;

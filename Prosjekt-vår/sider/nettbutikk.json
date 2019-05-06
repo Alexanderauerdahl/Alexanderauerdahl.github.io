@@ -14,7 +14,7 @@
 
       "pris": 2,
 
-      "KM": 5000,
+      "KM": 5.000,
 
       "ImageURL": "prosjekt-vår850i.jpg"
 
@@ -32,7 +32,7 @@
 
       "pris": 1.67,
 
-      "KM": 3000,
+      "KM": 3.000,
 
       "ImageURL": "prosjekt-vårX7.jpg"
 
@@ -50,7 +50,7 @@
 
       "pris": 1.25,
 
-      "KM": 36000,
+      "KM": 36.000,
 
       "ImageURL": "prosjekt-vårRS6.jpg"
 
@@ -68,7 +68,7 @@
 
       "pris": 1.95,
 
-      "KM": 40.000,
+      "KM": 28.000,
 
       "ImageURL": "prosjekt-vårContinental.jpg"
 
@@ -122,7 +122,7 @@
 
       "pris": 3.2,
 
-      "KM": 5000,
+      "KM": 5.000,
 
       "ImageURL": "prosjekt-vår488.jpg"
 
@@ -140,7 +140,7 @@
 
       "pris": 1.25,
 
-      "KM": 35000,
+      "KM": 35.000,
 
       "ImageURL": "prosjekt-vårG63.jpg"
 
@@ -176,7 +176,7 @@
 
       "pris": 1.2,
 
-      "KM": 29000,
+      "KM": 11.000,
 
       "ImageURL": "prosjekt-vårChallenger.jpg"
 
@@ -194,31 +194,13 @@
 
       "pris": 2.8,
 
-      "KM": 7000,
+      "KM": 7.000,
 
       "ImageURL": "prosjekt-vårDB11.jpg"
 
      },
 
-     "111": {
-
-      "Type": "Eksklusiv",
-
-      "Merke": "Maybach",
-
-      "lansert": "2015",
-
-      "modell": "S600",
-
-      "pris": 3.5,
-
-      "KM": 50.000,
-
-      "ImageURL": "prosjekt-vårS600.jpg"
-
-     },
-
-     "112": {
+      "112": {
 
       "Type": "Eksklusiv",
 
@@ -230,7 +212,7 @@
 
       "pris": 1.8,
 
-      "KM": 20.000,
+      "KM": 13.000,
 
       "ImageURL": "prosjekt-vårPGT.jpg"
 
@@ -284,7 +266,7 @@
 
       "pris": 2.5,
 
-      "KM": 7000,
+      "KM": 7.000,
 
       "ImageURL": "prosjekt-vårBentayga.jpg"
 

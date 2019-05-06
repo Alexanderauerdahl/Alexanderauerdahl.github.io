@@ -2,22 +2,22 @@
 <html lang="no" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Nettbutikk</title>
+    <title>New Wheels.com</title>
     <link rel="stylesheet" href="nettbutikk.css">
 
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
 
-    var config = {
-      apiKey: "AIzaSyCXt1gzYruwaYyrvjta0_qI06U-aCEkKrI",
-      authDomain: "nettbutikk-prosjekt.firebaseapp.com",
-      databaseURL: "https://nettbutikk-prosjekt.firebaseio.com",
-      projectId: "nettbutikk-prosjekt",
-      storageBucket: "nettbutikk-prosjekt.appspot.com",
-      messagingSenderId: "145054998689"
-  };
-  firebase.initializeApp(config);
-</script>
+     var config = {
+       apiKey: "AIzaSyCXt1gzYruwaYyrvjta0_qI06U-aCEkKrI",
+       authDomain: "nettbutikk-prosjekt.firebaseapp.com",
+       databaseURL: "https://nettbutikk-prosjekt.firebaseio.com",
+       projectId: "nettbutikk-prosjekt",
+       storageBucket: "nettbutikk-prosjekt.appspot.com",
+       messagingSenderId: "145054998689"
+     };
+       firebase.initializeApp(config);
+    </script>
 
   </head>
   <body>
@@ -30,7 +30,7 @@
          <button onclick="visSport()">Sport</button>
          <button onclick="visDiverse()">Diverse</button>
          <button onclick="visEksklusiv()">Eksklusiv</button>
-         <button onclick="visKM()">0-40.000 KM</button>
+         <button onclick="visKM()">0-36.000 KM</button>
          <button onclick="visPris()">under 2M</button>
          <button onclick="visPris2()">over 2M</button>
        </nav>
@@ -53,6 +53,7 @@
           function genererHTML(snapshot){
             console.log(snapshot.val());
             let Biler = snapshot.val();
+            let key = snapshot.key;
 
           main.innerHTML +=`
               <article class="Biler">
@@ -62,10 +63,11 @@
                 <p>${Biler.Type}</p>
                 <h3>${Biler.pris} Mill.</h3>
                 <h4>${Biler.KM} Km</h4>
+                <h5> <a href="underside.html?id=${key}"><p>Se Mer!</p></a>
                 </p>
               </article>
           `
-      }
+        }
 
         function visAlle(){
           main.innerHTML = ``
@@ -92,7 +94,7 @@
       }
       function visKM(){
         main.innerHTML = "";
-        Biler.orderByChild("KM").startAt(0).endAt(40000).on("child_added", genererHTML);
+        Biler.orderByChild("KM").startAt(0).endAt(36000).on("child_added", genererHTML);
       }
       function visPris(){
         main.innerHTML = "";
@@ -103,10 +105,33 @@
         Biler.orderByChild("pris").startAt(2).endAt(4).on("child_added", genererHTML);
       }
 
-
-       </script>
+     </script>
     <footer>
+      <div class="gridfooter">
 
+       <p><h1>Kontakt oss:</h1>
+        <p>Tlf: 94144884</p>
+        <p>Mail: New.Wheels@gmail.com</p>
+        <p>Showroom:The Hills Nesbru</p>
+       </p>
+
+       <p><h2>Partnere:</h2>
+        <p>Express.com</p>
+        <p>LiL Baby</p>
+        <p>David Villa</p>
+       </p>
+
+       <p><h3>Sosiale Medier:</h3>
+        <p>Instagram:Official_NewWheels</p>
+        <p>Youtube:New Wheels</p>
+        <p>Snapchat:Official_NewWheels</p>
+       </p>
+
+       <p><h4>Om Oss</h4>
+        <p>Vi er et selskap som ønsker å fylle drømmer. Vi selger top noch biler til en rimelig og bra pris. Vi holder til på Nesbru og har åpent alle dager 9-20.</p>
+       </p>
+
+      </div>
     </footer>
 
   </body>
