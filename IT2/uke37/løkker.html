@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Løkker</title>
+    <link rel="stylesheet" href="løkker.css">
+  </head>
+  <body>
+    <script>
+      var i=0;
+      while(i<=50){
+        document.write(i+"<br>")
+        i=i+1;
+      }
+    </script>
+    <script>
+      for(var i=0;i<=999;i+=3){
+        document.write(, "<br>");
+      }
+    </script>
+    <div class="gangetabellen">
+    <h1>Gangetabellen</h1>
+    <script>
+      document.write("<table>")
+      for(var i = 1;i <= 10; i++){
+        document.write("<tr>");
+          for (var j = 1;j <= 10 ; j++){
+            document.write("<td>"+ i + "x" + j + "=" + (i*j) + "</td>");
+                }
+                document.write("<br>");
+                document.write("</tr>");
+      }document.write("</table>")
+    </script>
+   </div>  
+
+  </body>
+</html>

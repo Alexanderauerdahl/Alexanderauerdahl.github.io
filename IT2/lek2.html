@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var min=0; var maks=100;
+      alert("Tenk på et tall mellom " +min+ " og " +maks);
+      var gjettetriktig=false;
+      while (gjettetriktig==false){
+        var gjett=Math.round((min+maks)/2);
+        var svar=prompt("tenker du på " +gjett+"? var det for høyt, for lavt eller riktig?");
+        if(svar=="riktig"){
+          alert("YAY!");
+          gjettetriktig=true;
+        } else if (svar=="for høyt"){
+          maks=gjett;
+        } else if (svar=="for lavt"){
+          min=gjett;
+        } else{
+          alert('jeg forstår ikke hva du mener! Du må svare "for høyt", " for lavt" eller" riktig');
+        }
+      }
+    </script>
+
+  </body>
+</html>

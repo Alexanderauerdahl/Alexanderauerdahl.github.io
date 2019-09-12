@@ -1,16 +1,21 @@
 function setup() {
   // put setup code here
   createCanvas(400, 400);
-  stroke(255);strokeWeight(4);
-  nofill();
-  if (mouseX>200){
-    fill(255,0,200)
-  }
-  rect(100,150,60,100)
+  background(228);
 }
-
+var xPos1=0; var yPos1=20;
 function draw() {
   // put drawing code here
-  background(220);
-
+strokeweight(4);stroke("green");
+var xPos2=width;
+while (yPos1<height)
+line(xPos1,yPos1,xPos2,yPos2);
+yPos1=yPos1+a;xPos2=xPos2+a;
+}
+if (yPos1>height){
+  while (xPos<=width){
+    line(xPos1,yPos1,xPos2,yPos2);
+    xPos2=xPos2+a;
+    xPos1=xPos1+a;
+  }
 }

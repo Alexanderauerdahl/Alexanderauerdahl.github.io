@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var a=0; var b=100;
+      var fasit =Math.floor(Math.random()*b+a);
+      var maksforsok=5; var antallgjett=1;
+      alert("Jeg har tenkt på et tall mellom " +a+ " og " +b+ ". Gjett!")
+      var gjett=Number(prompt("Gjett et tall. du har " + maksforsok + " forsøk"));
+      while (gjett !=fasit && antallgjett<maksforsok) {
+        if (gjett>fasit){
+          alert("ditt gjett på " +gjett+ " er for høyt!");
+        } else {
+            alert("ditt gjett på " +gjett+ " er for lavt!");
+          }
+          gjett=Number (prompt("gjett igjen (du har brukt " + antallgjett + "forsoøk)."));
+          antallgjett+=1;
+      }
+      if (gjett==fasit){
+        document.write("Riktig! svaret er " +gjett+ ". Du brukte " +antallgjett+ " forsøk.");
+      } else{
+        document.write("Du har brukt opp dine " +maksforsok+ " forsøk! Riktig svar var " +fasit+".");
+      }
+
+    </script>
+
+  </body>
+</html>
