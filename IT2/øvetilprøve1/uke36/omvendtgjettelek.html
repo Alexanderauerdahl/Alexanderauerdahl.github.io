@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+  </head>
+
+  <body>
+
+    <img src="" id ="bilde" alt="" width =100% height="600px">
+
+<script>
+
+  var min=0;
+
+  var maks=100;
+
+  var bilde =document.querySelector("#bilde");
+
+  alert("Tenk på et tall mellom "+min+ " og "+maks);
+
+  var gjettetRiktig =false;
+
+  while (gjettetRiktig==false){
+
+      var gjett =Math.round((min+maks)/2);
+
+      var svar =prompt("Tenker du på  " +gjett+ "? Var dette for høyt, for lavt eller riktig?");
+
+      if (svar=="riktig"){
+
+          alert("Jippi! Jeg er en flink maskin!");
+
+          gjettetRiktig = true;
+
+          bilde.src="./feiring.jpg";
+
+        }
+
+      else if (svar =="for høyt"){
+
+          maks=gjett;}
+
+      else if (svar=="for lavt"){
+
+          min=gjett}
+
+      else {
+
+          alert("Jeg forstår ikke hva du mener!");
+
+          alert('Du må svare "for høyt",  "for lavt", eller "riktig"');
+
+        }
+
+}
+
+</script>
+
+  </body>
+
+</html>

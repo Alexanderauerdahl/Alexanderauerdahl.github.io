@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+  </head>
+
+  <body>
+
+<h1>Invitasjon</h1>
+
+ <p id="invitasjon"></p>
+
+<script type="text/javascript">
+
+  //kommentar
+
+  var navn=prompt("Hvem skal inviteres?");
+
+  var invitasjon=document.querySelector("#invitasjon");
+
+console.log(invitasjon);
+
+//gjør om til stor forbokstav
+
+var navn = navn.charAt(0).toUpperCase()+navn.slice(1).toLowerCase();
+
+  invitasjon.innerHTML="Hei, "+ navn + ". "+ navn+ "  her kommer noe tekst. " +navn+ "  mer tekst " + navn;
+
+</script>
+
+  </body>
+
+</html>

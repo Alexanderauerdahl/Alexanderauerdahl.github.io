@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+  </head>
+
+  <body>
+
+<script>
+
+  var a=100;var b=0;
+
+var fasit =Math.floor(Math.random()*a+b);
+
+alert("Jeg har tenkt på et tall mellom "+b+ " og "+a + ". Du må gjette det")
+
+var antallGjett = 1;
+
+var maksForsok = 5;
+
+var gjett=Number(prompt("Gjett et tall. Du har "+maksForsok+" forsøk."));
+
+while (gjett !=fasit && antallGjett<maksForsok){
+
+    if (gjett > fasit){
+
+        alert("Ditt gjett på "+gjett+" er for høyt.");
+
+    }else {
+
+        alert("Ditt gjett på "+gjett+ " er for lavt");
+
+      }
+
+    gjett=Number(prompt("Gjett igjen (du har brukt "+antallGjett+ " forsøk)."));
+
+    antallGjett +=1
+
+}
+
+  if (gjett==fasit){
+
+    document.write("Helt riktig! Svaret er "+gjett+ "!");
+
+    document.write("Du brukte "+antallGjett+" forsøk!");
+
+  } else{
+
+    document.write("Du har brukt opp dine "+maksForsok+ " forsøk! GAME OVER! Riktig svar var "+fasit);
+
+  }
+
+</script>
+
+  </body>
+
+</html>
